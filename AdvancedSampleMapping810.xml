@@ -1,5 +1,7 @@
 <Interchange xmins="http://something.com" xmls:xsl="http://www.somelibrary.com/someyear/XMLSchema-instance">
-<!--Project by Joshua Kidder-->
+<!--Joshua Kidder-->
+<!--https://channelpartners.adobe.com/content/dam/cpp_assets/assets/public/edi/EDI_810_ANSI_X12_122007_001.pdf-->
+<!--../HUB BUSINESS SPECIFICATIONS/EDI_X12_810-Implementation-Guidelines.pdf-->
 <!--Interchange Control Header-->
 <Meta>
 <!--Authorization Information Qualifier-->
@@ -83,3 +85,150 @@
 <NTE01>INV</NTE01>
 <!--Description-->
 <NTE02>Free Text</NTE02>
+<Currency>
+<Meta>
+<!--Entity ID Code-->
+<CUR01>SE</CUR01>
+<!--Currency Code-->
+<CUR02>USD</CUR02>
+<ReferenceIdentification>
+<Meta>
+<!--Reference Identification Qualifier-->
+<REF01>PO</REF01>
+<!--Reference Identification-->
+<REF02>00000000000000000000001</REF02>
+<RemitToInformation>
+<!--Remit To Information Loop-->
+<Meta>
+<!--Entity ID Code-->
+<N101>RT</N101>
+<!--Remit To Location Name-->
+<N102>Remit To Location</N102>
+<!--Identification Code Qualifier-->
+<N103>92</N103>
+<!--Identification Code-->
+<N104>333</N104>
+<!--Additional Name Information-->
+<N201><!--Name-->Additional Remit To Name</N201>
+<N202><!--Name-->Additional Remit To Name</N202>
+<!--Remit To Address-->
+<N301><!--Address-->333 RemitTo Road</N301>
+<N302><!--Address-->Suite, 333</N302>
+<!--Remit To Geographic Location-->
+<N401><!--City Name-->Remit To City</N401>
+<N402><!--State Code-->OH</N402>
+<N403><!--Postal Code-->01973</N403>
+<N404><!--Country Code-->US</N404>
+<!--Remit To Administrative Communication Contact-->
+<PER01><!--Contact Function Code-->CN</PER01>
+<PER02><!--Name-->Contact Name</PER02>
+<PER03><!--Communications Number Qualifier-->TE</PER03>
+<PER04><!--Communications Number-->333-333-3333</PER04>
+<PER05><!--Communications Number Qualifier-->EM</PER05>
+<PER06><!--Communications Number-->remitto@sample.com</PER06>
+<PER07><!--Communications Number Qualifier-->FX</PER07>
+<PER08><!--Communications Number-->333-333-3333</PER08>
+<BillToInformation>
+<!--Bill To Information Loop-->
+<Meta>
+<!--Entity ID Code-->
+<N101>BT</N101>
+<!--Bill To Location Name-->
+<N102>Bill To Location</N102>
+<!--Identification Code Qualifier-->
+<N103>92</N103>
+<!--Identification Code-->
+<N104>011</N104>
+<!--Additional Name Information-->
+<N201><!--Name-->Additional Bill To Name</N201>
+<N202><!--Name-->Additional Bill To Name</N202>
+<!--Bill To Address-->
+<N301><!--Address-->011 BillTo Road</N301>
+<N302><!--Address-->Suite, 011</N302>
+<!--Bill To Geographic Location-->
+<N401><!--City Name-->Bill To City</N401>
+<N402><!--State Code-->OH</N402>
+<N403><!--Postal Code-->03675</N403>
+<N404><!--Country Code-->US</N404>
+<ShipToInformation>
+<!--Ship To Information Loop-->
+<Meta>
+<!--Entity ID Code-->
+<N101>ST</N101>
+<!--Ship To Location Name-->
+<N102>Ship To Location</N102>
+<!--Identification Code Qualifier-->
+<N103>92</N103>
+<!--Identification Code-->
+<N104>333</N104>
+<!--Additional Name Information-->
+<N201><!--Name-->Additional Ship To Name</N201>
+<N202><!--Name-->Additional Ship To Name</N202>
+<!--Ship To Address-->
+<N301><!--Address-->333 ShipTo Road</N301>
+<N302><!--Address-->Suite, 333</N302>
+<!--Bill To Geographic Location-->
+<N401><!--City Name-->Ship To City</N401>
+<N402><!--State Code-->OH</N402>
+<N403><!--Postal Code-->01973</N403>
+<N404><!--Country Code-->US</N404>
+<TermsOfSales/DeferredTerms>
+<Meta>
+<!--Terms Type Code-->
+<ITD01><!--Discount Not Applicable-->05</ITD01>
+<!--Terms Basis Date Code-->
+<ITD02><!--Invoice Date-->3</ITD02>
+<!--Terms Discount Percent-->
+<ITD03><!--Discount Percent--></ITD03>
+<!--Terms Discount Days Due-->
+<ITD05><!--Discount Days Due--></ITD05>
+<!--Terms Net Due Date-->
+<ITD07><!--Terms Due Date-->30</ITD07>
+<!--Percent-->
+<ITD15><!--No Discount, But 20% Penalty if over 30 Days Late-->20</ITD15>
+<DateTimeReference>
+<Meta>
+<!--Date/Time Qualifier-->
+<DTM01><!--Invoice Date-->003</DTM01>
+<!--Date-->
+<DTM02><!--Date CCYYMMDD-->20220403</DTM02>
+<!--Time-->
+<DTM03><!--Time HHMMSS-->1215</DTM03>
+<!--Time Code-->
+<DTM04><!--Code Identifying Time-->ED</DTM04>
+<DescriptionCommentsNotes>
+<Meta>
+<!--Reference Number Qualifier-->
+<N901><!--Qualifier-->L1</N901>
+<!--Date-->
+<N903><!--Description-->FREE FORM NOTES</N903>
+<FreeFormText>
+<Meta>
+<!--Free Form Text Message-->
+<MSG01><!--Free Form Message-->FREE FORM MESSAGE</MSG01>
+<TotalMonetaryValue>
+<Meta>
+<!--Total Monetary Value Summary-->
+<TDS01><!--Total Invoice Amount (Weekly)-->1000.00</TDS01>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
