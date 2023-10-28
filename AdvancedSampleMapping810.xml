@@ -1,0 +1,84 @@
+<Interchange xmins="http://something.com" xmls:xsl="http://www.somelibrary.com/someyear/XMLSchema-instance">
+<!--Interchange Control Header-->
+<Meta>
+<!--Authorization Information Qualifier-->
+<ISA01><!--Authorization and Security Information-->00</ISA01>
+<!--Authorization Information-->
+<ISA02>          </ISA02>
+<!--Seurity Information Qualifier-->
+<ISA03><!--Authorization and Security Information-->00</ISA03>
+<!--Security Information-->
+<ISA04>          </ISA04>
+<!--Interchange ID Qualifier (Sender)-->
+<ISA05><!--Mutually Defined-->ZZ</ISA05>
+<!--Interchange Sender ID-->
+<ISA06>VENDOR         </ISA06>
+<!--Interchange ID Qualifier (Receiver)-->
+<ISA07><!--Mutually Defined-->ZZ</ISA07>
+<!--Interchange Receiver ID-->
+<ISA08>AMAZON         </ISA08>
+<!--Interchange Date YYMMDD-->
+<ISA09>220304</ISA09>
+<!--Interchange Time HHMM-->
+<ISA10>0300</ISA10>
+<!--Interchange Control Standards Identifier-->
+<ISA11>U</ISA11>
+<!--Interchange Control Version Number Code-->
+<ISA12><!--ASC X12 Standards Issued by ANSI-->00401</ISA12>
+<!--Interchange Control Number-->
+<ISA13>000000001</ISA13>
+<!--Acknowledgment Requested Code-->
+<ISA14><!--Required for Acknowledgement-->0</ISA14>
+<!--Interchange Usage Indicator Code-->
+<ISA15><!--Test Data-->T</ISA15>
+<!--Component Element Separator-->
+<ISA16>&gt;</ISA16>
+<FunctionalGroup>
+<!--Functional Group Control Header-->
+<Meta>
+<!--Functional ID Code-->
+<GS01><!--Invoice Information 810-->IN</GS01>
+<!--Application Sender Code-->
+<GS02>VENDOR</GS02>
+<!--Application Receiver Code-->
+<GS03>AMAZON</GS03>
+<!--Date CCYYMMDD-->
+<GS04>20220403</GS04>
+<!--Time HHMM-->
+<GS05>0300</GS05>
+<!--Group Control Number-->
+<GS06>000000001</GS06>
+<!--Responsible Agency Code-->
+<GS07>X</GS07>
+<!--Version Code-->
+<GS08>004010</GS08>
+<TransactionHeader>
+<Meta>
+<!--Transaction Set ID-->
+<ST01>810</ST01>
+<!--Transaction Set-->
+<ST01>000000001</ST01>
+<BeginningSegment>
+<Meta>
+<!--Invoice Date-->
+<BIG01>20220403</BIG01>
+<!--Invoice Number-->
+<BIG02>0000000000000000000001</BIG02>
+<!--Order Date-->
+<BIG03>        </BIG03>
+<!--Purchase Order Number-->
+<BIG04>00000000000000000000001</BIG04>
+<!--Release Number-->
+<BIG05>001</BIG05>
+<!--Change Order Sequence Number-->
+<BIG06>001</BIG06>
+<!--Transaction Type-->
+<BIG07>DI</BIG07>
+<!--Purpose Code-->
+<BIG08>00</BIG08>
+<SpecialInstructions>
+<Meta>
+<!--Reference Code-->
+<NTE01>INV</NTE01>
+<!--Description-->
+<NTE02>Free Text</NTE02>
