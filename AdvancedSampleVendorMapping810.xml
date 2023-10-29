@@ -1,7 +1,8 @@
-<Interchange xmins="http://something.com" xmls:xsl="http://www.somelibrary.com/someyear/XMLSchema-instance">
 <!--Joshua Kidder-->
 <!--https://channelpartners.adobe.com/content/dam/cpp_assets/assets/public/edi/EDI_810_ANSI_X12_122007_001.pdf-->
+<!--https://www.riteaidediservices.com/wp-content/uploads/2015/08/SMART-by-GEP-EDI_X12_810-Implementation-Guidelines.pdf-->
 <!--../HUB BUSINESS SPECIFICATIONS/EDI_X12_810-Implementation-Guidelines.pdf-->
+<Interchange xmins="http://something.com" xmls:xsl="http://www.somelibrary.com/someyear/XMLSchema-instance">
 <!--Interchange Control Header-->
 <Meta>
 <!--Authorization Information Qualifier-->
@@ -210,25 +211,125 @@
 <Meta>
 <!--Total Monetary Value Summary-->
 <TDS01><!--Total Invoice Amount-->1000.00</TDS01>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
+<TaxInformation>
+<Meta>
+<!--Tax Type Code-->
+<TXI01><!--Tax Code-->TX</TXI01>
+<!--Monetary Amount-->
+<TXI02><!--Total Amount-->81.51</TXI02>
+<ChargeAllowanceInformation>
+<Meta>
+<!--Allowance or Charge Indicator-->
+<SAC01><!--Charge-->C</SAC01>
+<!--Service, Promotion, Allowance, or Charge Code-->
+<SAC02><!--Other Additional Charge-->F050</SAC02>
+<!--Amount-->
+<SAC05><!--Total Amount for Service, Promotion, Allowance, or Charge-->250.00</SAC05>
+<!--Description-->
+<SAC15><!--Free Form Text/Descriptions-->FREE FORM MESSAGE</SAC15>
+<ItemInformation>
+<!--Item Level Information Loop-->
+<Meta>
+<!--Assigned ID-->
+<IT101><!--Line Item Number-->1</IT101>
+<!--Quantity Invoiced-->
+<IT102><!--Number of Units Invoiced-->5</IT102>
+<!--Unit of Measure Code-->
+<IT103><!--Unit of Measure-->EA</IT103>
+<!--Unit Price-->
+<IT104><!--Price per Unit-->200.00</IT104>
+<!--Product/Service ID Qualifier-->
+<IT106><!--Vendor Catalog Number-->VC</IT106>
+<!--Product/Service ID-->
+<IT107><!--Supplier Part ID-->SET0004598.32</IT107>
+<!--Product/Service ID Qualifier-->
+<IT108><!--Vendor Supplemental Item Number (VS)--></IT108>
+<!--Product/Service ID-->
+<IT109><!--Supplier Part Auxillary ID--></IT109>
+<!--Product/Service ID Qualifier-->
+<IT110><!--Manufacturer Part Number (MG)--></IT110>
+<!--Product/Service IDr-->
+<IT111><!--Manufacturer Part ID--></IT111>
+<!--Product/Service ID Qualifier-->
+<IT112><!--Manufacturer Name (MF)--></IT112>
+<!--Product/Service ID-->
+<IT113><!--Manufacturer Name--></IT113>
+<!--Product/Service ID Qualifier-->
+<IT114><!--Buyer's Catalog Number Qualifier (CB)--></IT114>
+<!--Product/Service ID-->
+<IT115><!--Buyer's Catalog Number--></IT115>
+<!--Item Level Currency-->
+<!--Entity ID Code-->
+<CUR01><!--Seller--></CUR01>
+<!--Currency Code-->
+<CUR02><!--US Dollars--></CUR02>
+<!--Item Level Tax Information-->
+<!--Tax Type Code-->
+<TXI01><!--Tax Code--></TXI01>
+<!--Monetary Amount-->
+<TXI02><!--Total Amount--></TXI02>
+<!--Tax Exempt Code-->
+<TXI06><!--No (Not Tax Exempt)--></TXI06>
+<!--Item Level Item Description-->
+<!--Item Description Type Code-->
+<PID01><!--Free Form Code-->F</PID01>
+<!--Description-->
+<PID05><!--Free Form Description-->Item Description Message</PID05>
+<!--Item Level Reference Identification-->
+<!--Reference Indentifcation Qualifier-->
+<REF01><!--Line Item Control Number-->FJ</REF01>
+<!--Reference Identification-->
+<REF02><!--PO Line Number-->1</REF02>
+<!--Item Level Date/Time Reference-->
+<!--Date/Time Qualifier-->
+<DTM01><!--Service Period Start-->150</DTM01>
+<!--Date-->
+<DTM02><!--Date CCYYMMDD-->20220403</DTM02>
+<!--Time-->
+<DTM03><!--Time HHMM-->1215</DTM03>
+<!--Time Code-->
+<DTM04><!--Code Identifying Time-->ED</DTM04>
+<!--Item Level Date/Time Reference-->
+<!--Date/Time Qualifier-->
+<DTM01><!--Service Period End-->151</DTM01>
+<!--Date-->
+<DTM02><!--Date CCYYMMDD-->20220403</DTM02>
+<!--Time-->
+<DTM03><!--Time HHMM-->1215</DTM03>
+<!--Time Code-->
+<DTM04><!--Code Identifying Time-->ED</DTM04>
+<!--Item Level Charge and Allowance Information-->
+<!--Allowance or Charge Indicator-->
+<SAC01><!--Charge--></SAC01>
+<!--Service, Promotion, Allowance, or Charge Code-->
+<SAC02><!--Other Additional Charge--></SAC02>
+<!--Amount-->
+<SAC05><!--Total Amount for Service, Promotion, Allowance, or Charge--></SAC05>
+<!--Description-->
+<SAC15><!--Free Form Text/Descriptions--></SAC15>
+<TransactionTotals>
+<!--Summary Transaction Totals-->
+<Meta>
+<!--Number of Line Items-->
+<CTT01><!--Count of Line Items-->000001</CTT01>
+<TransactionSetTrailer>
+<!--Summary Transaction Set Trailer-->
+<Meta>
+<!--Number of Included Segments-->
+<SE01><!--Total Number of Segements-->32</SE01>
+<!--Transaction Set Control Number-->
+<SE02><!--Must match ST02-->000000001</SE02>
+<FunctionalGroupTrailer>
+<!--Summary Functional Group Trailer-->
+<Meta>
+<!--Number of Included Sets-->
+<SE01><!--Total Number of Transaction Sets-->000001</SE01>
+<!--Transaction Set Control Number-->
+<SE02><!--Must match GS06-->000000001</SE02>
+<InterchangeControlNumber>
+<!--Summary Functional Group Trailer-->
+<Meta>
+<!--Number of Included Groups-->
+<IEA01><!--Total Number of Functional Groups-->00001</IEA01>
+<!--Transaction Set Control Number-->
+<IEA02><!--Must match ISA13-->000000001</IEA02>
