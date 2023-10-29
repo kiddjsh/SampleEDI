@@ -1,2 +1,2 @@
 # SampleEDI
-This is a sample repository of a X12 810 Transaction Set I have been working on.
+This is the beginning of a sample repository of X12 Transaction Sets I'm working on.
